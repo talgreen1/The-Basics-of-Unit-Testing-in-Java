@@ -2,7 +2,8 @@ package com.junitcourse._03_assertions;
 
 import org.junit.Assert;
 
-import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class AssertionsIntro {
     public static void main(String[] args) {
