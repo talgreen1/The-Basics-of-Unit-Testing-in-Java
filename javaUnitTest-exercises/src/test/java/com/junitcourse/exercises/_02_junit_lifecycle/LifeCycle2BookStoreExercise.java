@@ -1,25 +1,47 @@
-package com.junitcourse.exercises._01_unit_test_and_tdd;
+package com.junitcourse.exercises._02_junit_lifecycle;
 
 import com.junitcourse._01_unit_test_and_tdd.Book;
 import com.junitcourse._01_unit_test_and_tdd.BookStore;
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 @SuppressWarnings("Duplicates")
 /**
- * Design the test 'getBookCount'
+ * Change the code to create 2 final books once, before the very first test.
+ * These books should be used by all the tests.
+ *
+ * Change the code to create new empty book store before each test
  */
+public class LifeCycle2BookStoreExercise {
 
-public class BookStoreTestExercise {
 
     @Test
     public void getBookCount() {
-        Assert.fail("Add test design here...");
+        //Given - Create book store and 2 books
+        BookStore store = new BookStore();
+        Book b1 = new Book(1, "The Hobbit", "J. R. R. Tolkien", 1937);
+        Book b2 = new Book(2, "Harry Potter", "J. K. Rowling", 1997);
+
+        //When adding 1 book
+        store.addBook(b1);
+
+        //Then - count of books is 1
+        assertThat(store.getBookCount()).isEqualTo(1);
+
+        //When adding another book
+        store.addBook(b2);
+
+        //Then - count of books is 2
+        assertThat(store.getBookCount()).isEqualTo(2);
+
+        //When trying to add existing book again
+        store.addBook(b1);
+
+        //Then - number of books is still 2
+        assertThat(store.getBookCount()).isEqualTo(2);
+
     }
-
-
     @Test
     public void emptyStore() {
         //Given you have new book store

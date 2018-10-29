@@ -2,6 +2,7 @@ package com.junitcourse._02_junit_lifecycle;
 
 import org.junit.*;
 
+// MUST be a public class!
 public class JunitLifeCycle {
     // MUST be a public method!
     @Test
