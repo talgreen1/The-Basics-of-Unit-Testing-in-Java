@@ -1,4 +1,4 @@
-package _01_unit_test_and_tdd;
+package com.junitcourse._01_unit_test_and_tdd;
 
 public class StringUtils {
 

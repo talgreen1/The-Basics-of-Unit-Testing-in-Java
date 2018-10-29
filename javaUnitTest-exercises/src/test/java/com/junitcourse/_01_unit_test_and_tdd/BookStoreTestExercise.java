@@ -1,24 +1,19 @@
-package _01_unit_test_and_tdd;
+package com.junitcourse._01_unit_test_and_tdd;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
+@SuppressWarnings("Duplicates")
+public class BookStoreTestExercise {
 
-public class BookStoreTest {
-
-    @Test
-    public void emptyStore() {
-        BookStore store = new BookStore();
-
-        assertThat(store.getBookCount()).isEqualTo(0);
-    }
 
     @Test
     public void getBookCount() {
-        // Add code
-    }
+        Assert.fail("Need to design this test...");
 
+    }
     @Test
     public void addBook() {
         BookStore store = new BookStore();
