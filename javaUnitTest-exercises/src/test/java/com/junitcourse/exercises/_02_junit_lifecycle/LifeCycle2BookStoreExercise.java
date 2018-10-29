@@ -8,7 +8,7 @@ import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 @SuppressWarnings("Duplicates")
 /**
- * Change the code to create 2 final books once, before the very first test.
+ * Change the code to create 2 books once, before the very first test.
  * These books should be used by all the tests.
  *
  * Change the code to create new empty book store before each test
