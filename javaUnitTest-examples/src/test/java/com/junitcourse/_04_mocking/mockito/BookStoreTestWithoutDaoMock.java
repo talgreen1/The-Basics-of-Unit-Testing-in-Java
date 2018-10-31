@@ -1,5 +1,6 @@
-package com.junitcourse._04_mocking;
+package com.junitcourse._04_mocking.mockito;
 
+import com.junitcourse._04_mocking.BookStore;
 import com.junitcourse._04_mocking.dao.BookStoreDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;

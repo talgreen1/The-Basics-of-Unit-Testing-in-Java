@@ -3,6 +3,12 @@ package com.junitcourse._04_mocking;
 import com.junitcourse._04_mocking.dao.BookStoreDao;
 import com.junitcourse._04_mocking.model.Book;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 public class BookStore {
@@ -51,5 +57,35 @@ public class BookStore {
 
     public List<Book> getAllBooks(){
         return this.books;
+    }
+
+    public String getShopsWithBooks(int id) throws IOException {
+        String result = "";
+
+        URL url = new URL("http://localhost:8090/stores/findStoreForBook/" + id);
+
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        conn.setRequestProperty("Accept", "application/json");
+
+        if (conn.getResponseCode() != 200) {
+            throw new RuntimeException("Failed : HTTP error code : "
+                    + conn.getResponseCode());
+        }
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(
+                (conn.getInputStream())));
+
+        String output;
+        System.out.println("Output from Server .... \n");
+        while ((output = br.readLine()) != null) {
+            result += output;
+        }
+
+        conn.disconnect();
+
+
+        // Add code to extract the store list from the response
+        return result;
     }
 }
