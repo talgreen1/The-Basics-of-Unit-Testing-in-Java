@@ -23,4 +23,17 @@ public class AssertJExerciseAnswer {
         assertThat(s1.length()).isEqualTo(s2.length());
     }
 
+    @Test
+    public void assertArray(){
+        String [] names = {"Gidi", "Dani", "Yoni", "Alon"};
+
+        // Add assertion using AssertJ that verifies:
+        // - The array is not empty
+        // - The array does not have duplicate values
+        // - The array have 4 elements
+        // - The arrays contains the values  "Yoni" and "Gidi"
+        assertThat(names).isNotEmpty().doesNotHaveDuplicates().hasSize(4).contains("Yoni", "Gidi");
+
+    }
+
 }
