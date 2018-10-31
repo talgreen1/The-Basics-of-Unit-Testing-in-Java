@@ -24,6 +24,10 @@ public class BookStoreTestWithServerMock {
     public void findStore() throws IOException {
         BookStore store = new BookStore(dao);
 
+        String store1 = "Stimazky, Tel-Aviv";
+        String store2 = "Tsomet Sfarim, Haifa";
+        String storeNames = store1 + ";" + store2;
+
         // Create server mock to replay the following endpoint: "http://localhost:8090/stores/findStoreForBook/1"
 
         int port = 8090;
@@ -31,16 +35,15 @@ public class BookStoreTestWithServerMock {
         wireMockServer.start();
         WireMock.configureFor("localhost", wireMockServer.port());
 
-        String storeName = "Stimazky, Tel-Aviv";
 
         stubFor(get(urlEqualTo("/stores/findStoreForBook/1"))
                 .willReturn(aResponse()
                         .withStatus(200)
-                        .withBody(storeName)));
+                        .withBody(storeNames)));
 
-        String shops = store.getShopsWithBooks(1);
+        String[] shops = store.getShopsWithBooks(1);
 
-        assertThat(shops).isEqualTo(storeName);
+        assertThat(shops).contains(store1, store2);
 
         wireMockServer.stop();
     }

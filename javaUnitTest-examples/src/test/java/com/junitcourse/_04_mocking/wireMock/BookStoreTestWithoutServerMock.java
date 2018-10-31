@@ -19,7 +19,7 @@ public class BookStoreTestWithoutServerMock {
     public void findStore() throws IOException {
         BookStore store = new BookStore(dao);
 
-        String shops = store.getShopsWithBooks(1);
+        String [] shops = store.getShopsWithBooks(1);
     }
 
 }

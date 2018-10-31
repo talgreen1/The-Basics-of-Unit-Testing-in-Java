@@ -59,7 +59,7 @@ public class BookStore {
         return this.books;
     }
 
-    public String getShopsWithBooks(int id) throws IOException {
+    public String[] getShopsWithBooks(int id) throws IOException {
         String result = "";
 
         URL url = new URL("http://localhost:8090/stores/findStoreForBook/" + id);
@@ -77,7 +77,6 @@ public class BookStore {
                 (conn.getInputStream())));
 
         String output;
-        System.out.println("Output from Server .... \n");
         while ((output = br.readLine()) != null) {
             result += output;
         }
@@ -86,6 +85,6 @@ public class BookStore {
 
 
         // Add code to extract the store list from the response
-        return result;
+        return result.split(";");
     }
 }
