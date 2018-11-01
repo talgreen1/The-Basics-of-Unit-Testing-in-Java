@@ -35,7 +35,7 @@ public class BookStoreTestWithServerMock {
         wireMockServer.start();
         WireMock.configureFor("localhost", wireMockServer.port());
 
-
+        //Create stub for the find stores api. This tells the mock server how to response for the request
         stubFor(get(urlEqualTo("/stores/findStoreForBook/1"))
                 .willReturn(aResponse()
                         .withStatus(200)
@@ -43,6 +43,10 @@ public class BookStoreTestWithServerMock {
 
         String[] shops = store.getShopsWithBooks(1);
 
+        //Verify that the store executed get request to the mock server
+        verify(getRequestedFor(urlEqualTo("/stores/findStoreForBook/1")));
+
+        //Verify that the return value from the 'getShopsWithBooks' contains the correct values
         assertThat(shops).contains(store1, store2);
 
         wireMockServer.stop();
