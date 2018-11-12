@@ -14,7 +14,7 @@ public class AssertJExercise {
     }
 
     @Test
-    public void twoStringsSameLenghtTest() {
+    public void twoStringsSameLengthTest() {
         String s1 = "Bug";
         String s2 = "Dog";
 
