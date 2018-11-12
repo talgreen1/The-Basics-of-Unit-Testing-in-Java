@@ -2,7 +2,7 @@ package com.junitcourse._01_unit_test_and_tdd;
 
 public class StringUtils {
 
-    public String coctacLowerCase(String str1, String str2){
+    public String concatLowerCase(String str1, String str2){
         String result;
 
         if (str1 == null){
