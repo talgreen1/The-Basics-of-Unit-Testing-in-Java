@@ -10,10 +10,11 @@ import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 @SuppressWarnings("Duplicates")
 /**
- * Change the code to create 2 books once, before the very first test.
- * These books should be used by all the tests.
+ * Change the following unit test code:
+ * - Create 2 books once, before the very first test.
+ *   These books should be used by all the tests.
  *
- * Change the code to create new empty book store before each test
+ * - Create new empty book store before each test. Use it in all tests
  */
 public class LifeCycle2BookStoreExerciseAnswer {
 
@@ -33,30 +34,7 @@ public class LifeCycle2BookStoreExerciseAnswer {
     }
 
     @Test
-    public void getBookCount() {
-        //Given - Create book store and 2 books
-
-        //When adding 1 book
-        bookStore.addBook(book1);
-
-        //Then - count of books is 1
-        assertThat(bookStore.getBookCount()).isEqualTo(1);
-
-        //When adding another book
-        bookStore.addBook(book2);
-
-        //Then - count of books is 2
-        assertThat(bookStore.getBookCount()).isEqualTo(2);
-
-        //When trying to add existing book again
-        bookStore.addBook(book1);
-
-        //Then - number of books is still 2
-        assertThat(bookStore.getBookCount()).isEqualTo(2);
-
-    }
-    @Test
-    public void emptyStore() {
+    public void Given_new_store_When_getting_book_count_Then_count_is_0() {
         //Given you have new book store
 
         //When you get it's book count
@@ -67,11 +45,10 @@ public class LifeCycle2BookStoreExerciseAnswer {
     }
 
     @Test
-    public void addBook() {
+    public void Given_new_store_When_adding_book_Then_count_should_be_1_and_book_should_be_returned() {
         //Arrange:
         //1. Create new book store
         //2. Create new book
-
 
         // Act: Add the book to the book store
         Book result = bookStore.addBook(book1);
@@ -84,27 +61,63 @@ public class LifeCycle2BookStoreExerciseAnswer {
     }
 
     @Test
-    public void getBookById() {
-        //Given - new book store and new book
+    public void Given_new_store_When_trying_to_get_a_book_Then_null_is_returned() {
+        //Given - new book store
 
-        //When doing nothing
+        //When trying to get a book by ID
+        Book result = bookStore.getBookById(1);
 
-        //Then - you get null when trying to get a book by ID
-        Book result;
-        result = bookStore.getBookById(book1.getId());
+        //Then - You get null
         assertThat(result).isNull();
+    }
+
+    @Test
+    public void Given_new_store_When_adding_book_Then_you_can_get_it_by_id() {
+        //Given - new book store and new book
 
         //When adding the book to the book store and getting a book by the correct ID
         bookStore.addBook(book1);
-        result = bookStore.getBookById(book1.getId());
+        Book result = bookStore.getBookById(book1.getId());
 
         //Then you get the same book you've added before
         assertThat(result).isSameAs(book1);
+    }
+
+    @Test
+    public void Given_store_with_book_When_getting_book_by_incorrect_id_Then_you_get_null() {
+        //Given - book store with 1 book
+        bookStore.addBook(book1);
 
         //When trying to get a book by incorrect ID
-        result = bookStore.getBookById(book2.getId());
+        Book result = bookStore.getBookById(book2.getId());
 
         //Then you get null
         assertThat(result).isNull();
+    }
+
+    @Test
+    public void Given_store_with_2_books_When_getting_books_count_Then_get_2() {
+        //Given store with 2 books
+        bookStore.addBook(book1);
+        bookStore.addBook(book2);
+
+        //When getting the book count
+        int count = bookStore.getBookCount();
+
+        //Then - count is 2
+        assertThat(count).isEqualTo(2);
+    }
+
+    @Test
+    public void Given_new_store_When_adding_same_book_twice_Then_count_is_1() {
+        //Given new store
+
+        // When adding the same book twice
+        bookStore.addBook(book1);
+        bookStore.addBook(book1);
+
+        //Then - the count is 1
+        int count = bookStore.getBookCount();
+        assertThat(count).isEqualTo(1);
     }
 }
