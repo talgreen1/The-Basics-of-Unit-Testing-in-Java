@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
-public class BookStoreTestWithoutServerMock {
+public class _01_BookStoreTestWithoutServerMock {
     @Mock
     private BookStoreDao dao;
 
@@ -19,6 +19,7 @@ public class BookStoreTestWithoutServerMock {
     public void findStore() throws IOException {
         BookStore store = new BookStore(dao);
 
+        // Cannot test it in unit test - there is no server available
         String [] shops = store.getShopsWithBooks(1);
     }
 

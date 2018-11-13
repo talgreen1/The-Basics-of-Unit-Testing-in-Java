@@ -59,6 +59,12 @@ public class BookStore {
         return this.books;
     }
 
+    /**
+     * Returns a list of shops that have this book in stock
+     * @param id    The ID of the book
+     * @return  String with all the shops names that have this book in stock. The list is seperated by ';'
+     * @throws IOException
+     */
     public String[] getShopsWithBooks(int id) throws IOException {
         String result = "";
 

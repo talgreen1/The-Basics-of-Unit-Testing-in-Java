@@ -9,7 +9,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.mockito.Mockito.verify;
 
-public class BookStoreTestWithoutDaoMock {
+public class _01_BookStoreTestWithoutDaoMock {
 
     private BookStoreDao dao;
 

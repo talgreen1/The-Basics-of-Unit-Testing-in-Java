@@ -16,7 +16,7 @@ import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMoc
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
-public class BookStoreTestWithServerMock {
+public class _02_BookStoreTestWithServerMock {
     @Mock
     private BookStoreDao dao;
 
@@ -24,11 +24,11 @@ public class BookStoreTestWithServerMock {
     public void findStore() throws IOException {
         BookStore store = new BookStore(dao);
 
+        // Create server mock to replay the following endpoint: "http://localhost:8090/stores/findStoreForBook/1"
         String store1 = "Stimazky, Tel-Aviv";
         String store2 = "Tsomet Sfarim, Haifa";
         String storeNames = store1 + ";" + store2;
 
-        // Create server mock to replay the following endpoint: "http://localhost:8090/stores/findStoreForBook/1"
 
         int port = 8090;
         WireMockServer wireMockServer = new WireMockServer(wireMockConfig().port(port));
@@ -41,6 +41,7 @@ public class BookStoreTestWithServerMock {
                         .withStatus(200)
                         .withBody(storeNames)));
 
+        // execute the 'getShopsWithBooks' method - it will use the mock server
         String[] shops = store.getShopsWithBooks(1);
 
         //Verify that the store executed get request to the mock server

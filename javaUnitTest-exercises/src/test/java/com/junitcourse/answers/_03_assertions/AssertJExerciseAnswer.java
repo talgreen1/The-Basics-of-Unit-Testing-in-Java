@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 public class AssertJExerciseAnswer {
 
     @Test
@@ -12,10 +13,12 @@ public class AssertJExerciseAnswer {
 
         // Add assertion using AssertJ that num contains 2 digits
         assertThat(num).isGreaterThanOrEqualTo(10).isLessThan(100);
+        // Or
+        assertThat(num).isBetween(10, 99);
     }
 
     @Test
-    public void twoStringsSameLenghtTest() {
+    public void twoStringsSameLengthTest() {
         String s1 = "Bug";
         String s2 = "Dog";
 
@@ -24,15 +27,19 @@ public class AssertJExerciseAnswer {
     }
 
     @Test
-    public void assertArray(){
-        String [] names = {"Gidi", "Dani", "Yoni", "Alon"};
+    public void assertArray() {
+        String[] names = {"Gidi", "Dani", "Yoni", "Alon"};
 
         // Add assertion using AssertJ that verifies:
         // - The array is not empty
         // - The array does not have duplicate values
         // - The array have 4 elements
         // - The arrays contains the values  "Yoni" and "Gidi"
-        assertThat(names).isNotEmpty().doesNotHaveDuplicates().hasSize(4).contains("Yoni", "Gidi");
+        assertThat(names)
+                .isNotEmpty()
+                .doesNotHaveDuplicates()
+                .hasSize(4)
+                .contains("Yoni", "Gidi");
 
     }
 

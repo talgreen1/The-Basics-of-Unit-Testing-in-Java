@@ -12,9 +12,11 @@ public class BookStoreDao {
     }
 
     public void addBook(Book book) {
+        // Production DB code should be here...
     }
 
     public List<Book> getAllBooks() {
+        // Production DB code should be here...
         return null;
     }
 }
