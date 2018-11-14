@@ -1,9 +1,8 @@
-package com.junitcourse.answers._04_final_exercies;
+package com.junitcourse.answers._04_final_exercise;
 
 import com.junitcourse._04_final_exercies.Book;
 import com.junitcourse._04_final_exercies.BookStore;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.List;

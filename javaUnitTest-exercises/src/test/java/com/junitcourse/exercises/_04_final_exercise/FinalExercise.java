@@ -1,6 +1,6 @@
-package com.junitcourse.exercises._04_final_exercies;
+package com.junitcourse.exercises._04_final_exercise;
 
-public class FinalExercie {
+public class FinalExercise {
     /**
      * Add unit tests for the following methods of BookStore:
      * - getBooksByAuthor
