@@ -1,7 +1,7 @@
-package com.junitcourse.answers._05_final_exercise;
+package com.junitcourse.answers._05_final_exercise_1;
 
-import com.junitcourse._04_final_exercies.Book;
-import com.junitcourse._04_final_exercies.BookStore;
+import com.junitcourse._04_final_exercies_1.Book;
+import com.junitcourse._04_final_exercies_1.BookStore;
 import org.junit.Before;
 import org.junit.Test;
 

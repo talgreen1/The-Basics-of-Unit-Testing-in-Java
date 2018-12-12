@@ -8,11 +8,8 @@ import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 @SuppressWarnings("Duplicates")
 /**
- * Change the following unit test code:
- * - Create 2 books once, before the very first test.
- *   These books should be used by all the tests.
- *
- * - Create new empty book store before each test. Use it in all tests
+ * Refactor the following code by using some extra annotations.
+ * Try to remove duplicate code.
  */
 public class LifeCycle2BookStoreExercise {
 

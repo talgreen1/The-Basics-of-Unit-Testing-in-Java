@@ -1,4 +1,4 @@
-package com.junitcourse._04_final_exercies;
+package com.junitcourse._04_final_exercies_1;
 
 import java.util.Collections;
 import java.util.LinkedList;
