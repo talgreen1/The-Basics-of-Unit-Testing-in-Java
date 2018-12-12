@@ -1,4 +1,4 @@
-package com.junitcourse.answers._03_assertions;
+package com.junitcourse.answers._04_assertions;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.junitcourse.answers._04_final_exercise;
+package com.junitcourse.answers._05_final_exercise;
 
 import com.junitcourse._04_final_exercies.Book;
 import com.junitcourse._04_final_exercies.BookStore;
