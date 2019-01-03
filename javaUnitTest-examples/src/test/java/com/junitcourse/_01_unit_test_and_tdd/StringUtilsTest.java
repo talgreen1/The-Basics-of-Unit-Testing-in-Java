@@ -22,8 +22,13 @@ public class StringUtilsTest {
 
         String result = utils.concatLowerCase("HELLO", null);
         assertThat(result).isEqualTo("hello");
+    }
 
-        result = utils.concatLowerCase(null, "HELLO");
+    @Test
+    public void concatLowerCase_1Null1String_stringInLowercase() {
+        StringUtils utils = new StringUtils();
+
+        String result = utils.concatLowerCase(null, "HELLO");
         assertThat(result).isEqualTo("hello");
     }
 
