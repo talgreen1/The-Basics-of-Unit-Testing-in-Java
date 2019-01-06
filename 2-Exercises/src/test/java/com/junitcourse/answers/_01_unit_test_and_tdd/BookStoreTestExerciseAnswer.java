@@ -1,9 +1,7 @@
 package com.junitcourse.answers._01_unit_test_and_tdd;
 
-import com.junitcourse._01_unit_test_and_tdd.Book;
-import com.junitcourse._01_unit_test_and_tdd.BookStore;
-import javafx.beans.binding.When;
-import org.junit.Assert;
+import com.junitcourse._901_unit_test_and_tdd.Book;
+import com.junitcourse._901_unit_test_and_tdd.BookStore;
 import org.junit.Test;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;

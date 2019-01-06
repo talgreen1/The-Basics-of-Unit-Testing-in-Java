@@ -1,6 +1,4 @@
-package com.junitcourse._01_unit_test_and_tdd;
-
-import org.junit.Test;
+package com.junitcourse._901_unit_test_and_tdd;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

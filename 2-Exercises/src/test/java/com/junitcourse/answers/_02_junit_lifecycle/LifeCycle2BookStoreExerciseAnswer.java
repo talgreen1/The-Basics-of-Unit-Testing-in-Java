@@ -1,7 +1,7 @@
 package com.junitcourse.answers._02_junit_lifecycle;
 
-import com.junitcourse._01_unit_test_and_tdd.Book;
-import com.junitcourse._01_unit_test_and_tdd.BookStore;
+import com.junitcourse._901_unit_test_and_tdd.Book;
+import com.junitcourse._901_unit_test_and_tdd.BookStore;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;

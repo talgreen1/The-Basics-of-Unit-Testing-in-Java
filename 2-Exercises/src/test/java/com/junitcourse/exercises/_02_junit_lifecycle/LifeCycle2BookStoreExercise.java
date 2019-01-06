@@ -1,7 +1,7 @@
 package com.junitcourse.exercises._02_junit_lifecycle;
 
-import com.junitcourse._01_unit_test_and_tdd.Book;
-import com.junitcourse._01_unit_test_and_tdd.BookStore;
+import com.junitcourse._901_unit_test_and_tdd.Book;
+import com.junitcourse._901_unit_test_and_tdd.BookStore;
 import org.junit.Test;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;

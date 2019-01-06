@@ -1,4 +1,4 @@
-package com.junitcourse._01_unit_test_and_tdd;
+package com.junitcourse._901_unit_test_and_tdd;
 
 import java.util.LinkedList;
 import java.util.List;

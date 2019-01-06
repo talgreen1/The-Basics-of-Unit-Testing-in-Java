@@ -1,4 +1,4 @@
-package com.junitcourse.exercises._02_junit_lifecycle;
+package com.junitcourse._02_junit;
 
 import org.junit.Test;
 
@@ -6,7 +6,7 @@ import org.junit.Test;
  * Add before / after methods so that a message is printed to the console ONCE
  * before the tests, and another message after EACH test.
  */
-public class LifeCycle1Exercise {
+public class Exe02_LifeCycle {
 
     @Test
     public void test1() {

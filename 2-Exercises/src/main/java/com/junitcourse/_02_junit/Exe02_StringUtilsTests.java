@@ -1,8 +1,10 @@
-package com.junitcourse._00_testing_our_code;
+package com.junitcourse._02_junit;
 
-public class Exe01_StringUtilsTests_Answer {
+import com.junitcourse._01_testing_our_code.Exe01_StringUtils;
+
+public class Exe02_StringUtilsTests {
     public static void main(String[] args) {
-        Exe01_StringUtils_Answer stringUtils = new Exe01_StringUtils_Answer();
+        Exe02_StringUtils stringUtils = new Exe02_StringUtils();
 
         String res = null;
 
