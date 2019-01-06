@@ -1,7 +1,6 @@
-package com.junitcourse._01_unit_test_and_tdd;
+package com.junitcourse._00_testing_our_code;
 
-public class StringUtils {
-
+public class Exe01_StringUtils_Answer {
     public String concatLowerCase(String str1, String str2){
         String result;
 
