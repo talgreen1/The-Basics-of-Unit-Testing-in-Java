@@ -21,8 +21,9 @@
         </plugins>
     </build>
     <modules>
-        <module>javaUnitTest-exercises</module>
-        <module>javaUnitTest-examples</module>
+        <module>1-Examples</module>
+        <module>2-Exercises</module>
+        <module>3-Answers</module>
     </modules>
 
 

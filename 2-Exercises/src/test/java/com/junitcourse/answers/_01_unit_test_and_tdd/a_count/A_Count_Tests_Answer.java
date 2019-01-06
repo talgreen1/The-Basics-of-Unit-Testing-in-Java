@@ -5,7 +5,7 @@ public class A_Count_Tests_Answer {
     public static void main(String[] args) {
         // Add your tests here...
 
-        StringCalc stringCalc = new StringCalc();
+        StringCalcAnswer stringCalc = new StringCalcAnswer();
         int res;
         res = stringCalc.a_count("");
 

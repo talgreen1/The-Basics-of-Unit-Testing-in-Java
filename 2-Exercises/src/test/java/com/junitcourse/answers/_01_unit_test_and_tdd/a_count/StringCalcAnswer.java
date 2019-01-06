@@ -1,6 +1,6 @@
 package com.junitcourse.answers._01_unit_test_and_tdd.a_count;
 
-public class StringCalc {
+public class StringCalcAnswer {
 
     public int a_count(String str){
         int originalLength = str.length();
