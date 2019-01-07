@@ -1,6 +1,6 @@
 package com.junitcourse._02_junit;
 
-public class Exe02_StringUtils {
+public class Exe03_StringUtils {
     public String concatLowerCase(String str1, String str2){
         String result;
 
