@@ -1,7 +1,5 @@
 package com.junitcourse._04_unit_tests;
 
-import com.junitcourse._04_unit_tests.Book;
-import com.junitcourse._04_unit_tests.BookStore;
 import org.assertj.core.api.AssertionsForClassTypes;
 import org.junit.Test;
 
@@ -44,6 +42,7 @@ public class Exe06_BookStoreTest_Answer {
     /*----------------------------------
      |   addBook(Book book) tests
      ----------------------------------*/
+
     @Test
     public void Given_new_store_When_adding_new_book_Then_count_should_be_1_and_book_should_be_returned() {
         //Arrange:
@@ -90,6 +89,39 @@ public class Exe06_BookStoreTest_Answer {
         assertThat(result).isSameAs(b2);
     }
 
+     /*----------------------------------
+     |   getBookById(int id) tests
+     ----------------------------------*/
 
+    @Test
+    public void Given_empty_store_When_trying_to_get_book_by_id_Then_null_is_returned() {
+        BookStore store = new BookStore();
+
+        Book book = store.getBookById(1);
+
+        assertThat(book).isNull();
+    }
+
+    @Test
+    public void Given_store_with_1_book_When_trying_to_get_that_book_by_id_Then_you_get_correct_book() {
+        BookStore store = new BookStore();
+        Book b = new Book(1, "The Hobbit", "J. R. R. Tolkien", 1937);
+        store.addBook(b);
+
+        Book book = store.getBookById(1);
+
+        assertThat(book).isSameAs(b);
+    }
+
+    @Test
+    public void Given_store_with_1_book_When_trying_to_get_book_by_wrong_id_Then_null_returned() {
+        BookStore store = new BookStore();
+        Book b = new Book(1, "The Hobbit", "J. R. R. Tolkien", 1937);
+        store.addBook(b);
+
+        Book book = store.getBookById(2);
+
+        assertThat(book).isNull();
+    }
 
 }
