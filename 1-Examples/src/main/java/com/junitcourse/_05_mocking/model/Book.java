@@ -1,4 +1,4 @@
-package com.junitcourse._901_unit_test_and_tdd;
+package com.junitcourse._05_mocking.model;
 
 import java.util.Objects;
 

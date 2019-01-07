@@ -1,14 +1,13 @@
-package com.junitcourse._04_mocking.wireMock;
+package com.junitcourse._05_mocking.wireMock;
 
-import com.junitcourse._04_mocking.BookStore;
-import com.junitcourse._04_mocking.dao.BookStoreDao;
+import com.junitcourse._05_mocking.BookStore;
+import com.junitcourse._05_mocking.dao.BookStoreDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.io.IOException;
-import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
 public class _01_BookStoreTestWithoutServerMock {

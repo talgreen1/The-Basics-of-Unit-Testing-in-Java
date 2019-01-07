@@ -1,13 +1,12 @@
-package com.junitcourse._04_mocking;
+package com.junitcourse._05_mocking;
 
-import com.junitcourse._04_mocking.dao.BookStoreDao;
-import com.junitcourse._04_mocking.model.Book;
+import com.junitcourse._05_mocking.dao.BookStoreDao;
+import com.junitcourse._05_mocking.model.Book;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.junitcourse._02_junit_lifecycle;
+package com.junitcourse._02_junit;
 
 import org.junit.*;
 

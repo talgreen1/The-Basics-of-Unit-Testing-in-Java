@@ -1,8 +1,7 @@
-package com.junitcourse._04_mocking.dao;
+package com.junitcourse._05_mocking.dao;
 
-import com.junitcourse._04_mocking.model.Book;
+import com.junitcourse._05_mocking.model.Book;
 
-import java.sql.Driver;
 import java.util.List;
 
 public class BookStoreDao {
