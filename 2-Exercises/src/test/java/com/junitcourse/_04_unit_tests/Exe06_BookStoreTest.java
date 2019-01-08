@@ -63,4 +63,5 @@ public class Exe06_BookStoreTest {
 
     // TODO: Add another test for the method 'addBook(book)
 
+    // TODO: ADd tests for the method 'getBookById(id)'
 }
