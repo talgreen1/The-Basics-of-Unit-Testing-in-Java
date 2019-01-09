@@ -1,4 +1,4 @@
-package com.junitcourse.exercises._04_final_exercise_1;
+package com.junitcourse.exercises._06_final_exercies;
 
 public class FinalExercise {
     /**

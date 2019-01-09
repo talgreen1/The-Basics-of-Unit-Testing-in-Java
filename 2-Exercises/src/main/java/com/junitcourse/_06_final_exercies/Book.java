@@ -1,4 +1,4 @@
-package com.junitcourse._904_final_exercies_1;
+package com.junitcourse._06_final_exercies;
 
 import java.util.Objects;
 

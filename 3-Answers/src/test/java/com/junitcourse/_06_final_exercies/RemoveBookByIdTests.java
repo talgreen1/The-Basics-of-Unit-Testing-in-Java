@@ -1,14 +1,12 @@
-package com.junitcourse.answers._05_final_exercise_1;
+package com.junitcourse._06_final_exercies;
 
-import com.junitcourse._06_final_exercies.Book;
-import com.junitcourse._06_final_exercies.BookStore;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class RemoveBookByIdTests {
     private static final Book BOOK_ID_1 = new Book(1, "The Hobbit", "J. R. R. Tolkien", 1937);
