@@ -45,8 +45,24 @@ public class BookStore {
         return null;
     }
 
-    public List<Book> filterByName(String a) {
+    public List<Book> filterByName(String name, boolean isRegex) {
 
-        return new ArrayList<>();
+        List<Book> res =  new ArrayList<>();
+
+        for (Book book : this.books) {
+            if (isRegex){
+                if (book.getName().matches(name)) {
+                    res.add(book);
+                }
+
+            }else{
+                if (book.getName().contains(name)){
+                    res.add(book);
+                }
+            }
+
+
+        }
+        return res;
     }
 }
