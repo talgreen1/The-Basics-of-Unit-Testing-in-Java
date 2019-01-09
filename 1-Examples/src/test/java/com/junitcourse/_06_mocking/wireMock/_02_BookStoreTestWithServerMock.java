@@ -1,9 +1,9 @@
-package com.junitcourse._05_mocking.wireMock;
+package com.junitcourse._06_mocking.wireMock;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
-import com.junitcourse._05_mocking.BookStore;
-import com.junitcourse._05_mocking.dao.BookStoreDao;
+import com.junitcourse._06_mocking.BookStore;
+import com.junitcourse._06_mocking.dao.BookStoreDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;

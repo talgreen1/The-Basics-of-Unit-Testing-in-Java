@@ -1,4 +1,4 @@
-package com.junitcourse._05_mocking.model;
+package com.junitcourse._06_mocking.model;
 
 import java.util.Objects;
 

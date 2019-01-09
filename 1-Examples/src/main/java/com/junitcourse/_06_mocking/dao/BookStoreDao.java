@@ -1,6 +1,6 @@
-package com.junitcourse._05_mocking.dao;
+package com.junitcourse._06_mocking.dao;
 
-import com.junitcourse._05_mocking.model.Book;
+import com.junitcourse._06_mocking.model.Book;
 
 import java.util.List;
 

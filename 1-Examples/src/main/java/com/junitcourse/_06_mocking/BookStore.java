@@ -1,7 +1,7 @@
-package com.junitcourse._05_mocking;
+package com.junitcourse._06_mocking;
 
-import com.junitcourse._05_mocking.dao.BookStoreDao;
-import com.junitcourse._05_mocking.model.Book;
+import com.junitcourse._06_mocking.dao.BookStoreDao;
+import com.junitcourse._06_mocking.model.Book;
 
 import java.io.BufferedReader;
 import java.io.IOException;

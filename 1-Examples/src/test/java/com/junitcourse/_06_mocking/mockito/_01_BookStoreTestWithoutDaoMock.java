@@ -1,7 +1,7 @@
-package com.junitcourse._05_mocking.mockito;
+package com.junitcourse._06_mocking.mockito;
 
-import com.junitcourse._05_mocking.BookStore;
-import com.junitcourse._05_mocking.dao.BookStoreDao;
+import com.junitcourse._06_mocking.BookStore;
+import com.junitcourse._06_mocking.dao.BookStoreDao;
 import org.junit.Test;
 
 import static org.mockito.Mockito.verify;

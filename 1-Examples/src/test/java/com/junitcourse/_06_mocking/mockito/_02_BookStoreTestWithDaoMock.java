@@ -1,8 +1,8 @@
-package com.junitcourse._05_mocking.mockito;
+package com.junitcourse._06_mocking.mockito;
 
-import com.junitcourse._05_mocking.BookStore;
-import com.junitcourse._05_mocking.dao.BookStoreDao;
-import com.junitcourse._05_mocking.model.Book;
+import com.junitcourse._06_mocking.BookStore;
+import com.junitcourse._06_mocking.dao.BookStoreDao;
+import com.junitcourse._06_mocking.model.Book;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -23,7 +23,7 @@ public class _02_BookStoreTestWithDaoMock {
     private BookStoreDao dao;
 
     @Test
-    public void readBooksFromDbWhenStoreIsCreated() throws IllegalAccessException, InstantiationException, ClassNotFoundException {
+    public void When_new_store_is_created_Then_book_list_is_taken_from_db() throws IllegalAccessException, InstantiationException, ClassNotFoundException {
         //When creating new bookStore - use the dao mock
         BookStore store = new BookStore(dao);
 
@@ -32,7 +32,7 @@ public class _02_BookStoreTestWithDaoMock {
     }
 
     @Test
-    public void returnBooksFromDb(){
+    public void When_new_store_is_created_Then_book_list_is_taken_from_db_improved(){
         //Create a book list to be return by the dao mock
         List<Book> books = new LinkedList<>();
 
